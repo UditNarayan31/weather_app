@@ -9,6 +9,8 @@
       class="rounded-tl-xl rounded-br-xl"
       outlined
       color="black"
+      id="inputSearch"
+      name="city"
       >
       </v-text-field> 
       <v-divider></v-divider>  
@@ -16,7 +18,7 @@
       <h2 class="text--primary d-inine text-center">{{weather.name}}, {{country.country}}</h2>
       <div class="text--secondary subtitle-2 text-center">{{dateBuilder()}}</div>
       <v-card class="d-flex justify-center rounded-xl mt-5 pa-3" color="rgba(0,126,255,0.55)" :elevation="6">
-        <div class="display-2 font-weight-bold">{{Math.round(temp.temp)}} °C</div>
+      <div class="display-2 font-weight-bold">{{Math.round(temp.temp)}} °C</div>
       </v-card>
      
       <div class="display-1 black--text text-center font-italic font-weight-bold mt-10">{{desc.main}}</div>
@@ -37,7 +39,6 @@
         baseUrl:'https://api.openweathermap.org/data/2.5/',
         query:'Goa',
         weather:{},
-        weather1:{},
         country:'',
         temp:'',
         desc:''
